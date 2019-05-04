@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  address1: MyText
+  address2: MyText
+  city: MyText
+  state: MyText
+  zip: 1
+  propertytype: MyText
+
+two:
+  address1: MyText
+  address2: MyText
+  city: MyText
+  state: MyText
+  zip: 1
+  propertytype: MyText
