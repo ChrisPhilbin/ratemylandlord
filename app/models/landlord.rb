@@ -11,7 +11,7 @@ class Landlord < ApplicationRecord
 	end
 
 	def number_of_properties
-		inclues(:properties).where(properties: {landlord_id: self.id}).count
+		self.properties.count
 	end
 
 	def overall_rating
