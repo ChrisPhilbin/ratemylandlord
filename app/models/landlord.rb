@@ -4,6 +4,10 @@ class Landlord < ApplicationRecord
 	has_many :reviews, through: :properties
 	validates :firstname, :lastname, :presence => true
 
+	def fullname
+		"#{self.firstname} #{self.lastname}"
+	end
+
 	def self.number_of_properties
 		inclues(:properties).where(properties: {landlord_id: params[:id]}).count
 	end
