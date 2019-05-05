@@ -19,7 +19,7 @@ class Landlord < ApplicationRecord
 	end
 
 	def number_of_tenants
-
+		self.tenants.count
 	end
 
 end

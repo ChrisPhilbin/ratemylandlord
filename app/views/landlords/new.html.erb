@@ -1,0 +1,6 @@
+<div align="center"><h3>Congrats, you're a landlord! Sign up below</h3></div>
+<%= form_for @landlord do |f| %>
+	<%= f.text_field :firstname %>
+	<%= f.text_field :lastname %>
+	<%= f.submit "Create account" %>
+<% end %>
