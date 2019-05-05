@@ -4,6 +4,10 @@ class PropertiesController < ApplicationController
 		@property = Property.new
 	end
 
+	def show
+		@property = Property.find(params[:id])
+	end
+
 	def create
 		@property = Property.new(property_params)
 		if @property.save
@@ -12,6 +16,9 @@ class PropertiesController < ApplicationController
 			render :new
 		end
 	end
+
+	def edit
+		@property = Property.find(params[:id])
 
 	private
 
