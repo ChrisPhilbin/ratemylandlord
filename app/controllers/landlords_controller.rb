@@ -9,7 +9,7 @@ class LandlordsController < ApplicationController
 	end
 
 	def create
-		@lanlord = Landlord.new(landlord_params)
+		@landlord = Landlord.new(landlord_params)
 		if @landlord.save
 			redirect_to @landlord
 		else
