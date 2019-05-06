@@ -10,7 +10,7 @@
 	<%= f.label :state %>
 	<%= f.text_field :state %>
 	<%= f.label :zip %>
-	<%= f.text_field :zip %>
+	<%= f.text_field :zip, maxlength: 5 %>
 	<%= f.label :propertytype %>
 	<%= f.text_field :propertytype %>
 	<%= f.submit "Create new property" %>
