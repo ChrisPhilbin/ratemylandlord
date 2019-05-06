@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+landlord1 = Landlord.create(firstname: "John", lastname: "Smith", email: "jsmith@bar.com")
+property1 = Property.create(address1: "123 Main street", address2: "none", city: "NYC", state: "NY", zip: 10002, propertytype: "Home")
