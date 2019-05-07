@@ -9,4 +9,8 @@ class Property < ApplicationRecord
 	validates :zip, length: { maximum: 5,
     too_long: "Zip codes can only be %{count} numbers long" }
     validates :propertytype, presence: true
+
+    def fulladdress
+    	"#{address1} #{city} #{state} #{zip}"
+    end
 end
