@@ -2,8 +2,7 @@ class PropertiesController < ApplicationController
 
 	def new
 		@landlord = Landlord.find(params[:landlord_id])
-		binding.pry
-		@property = Property.new(landlord_id: params[:landlord_id])
+		@property = Property.new
 	end
 
 	def show

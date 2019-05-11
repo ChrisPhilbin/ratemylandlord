@@ -1,6 +1,9 @@
 class Property < ApplicationRecord
-	has_many :landlord_properties
-	has_many :reviews
+	# has_many :landlord_properties
+	belongs_to :landlord
+	# has_many :reviews
+
+
 	validates :address1, presence: true
 	validates :city, presence: true
 	validates :state, presence: true

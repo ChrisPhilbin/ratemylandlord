@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_04_235654) do
+ActiveRecord::Schema.define(version: 2019_05_11_194231) do
 
   create_table "landlord_properties", force: :cascade do |t|
     t.integer "landlord_id"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 2019_05_04_235654) do
     t.text "propertytype"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "landlord_id"
   end
 
   create_table "reviews", force: :cascade do |t|

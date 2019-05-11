@@ -1,6 +1,6 @@
 class Landlord < ApplicationRecord
-	has_many :landlord_properties
-	has_many :properties, through: :landlord_properties
+	# has_many :landlord_properties
+	has_many :properties
 	has_many :tenants, through: :properties
 	has_many :reviews, through: :properties
 	validates :firstname, :lastname, :email, :presence => true
