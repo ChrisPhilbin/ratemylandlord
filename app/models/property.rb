@@ -13,4 +13,8 @@ class Property < ApplicationRecord
     def fulladdress
     	"#{address1} #{city} #{state} #{zip}"
     end
+
+    def new
+    	@propertty = Property.new(landlord_id: params[:landlord_id])
+    end
 end
