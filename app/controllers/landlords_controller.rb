@@ -2,6 +2,7 @@ class LandlordsController < ApplicationController
 
 	def new
 		@landlord = Landlord.new
+		@property = @landlord.properties.build
 	end
 
 	def show

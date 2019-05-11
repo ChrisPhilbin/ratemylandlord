@@ -1,6 +1,6 @@
 <div align="center"><h3>Add a new property</h3></div>
 
-<%= form_for @property do |f| %>
+<%= form_for ([@property, @landlord]) do |f| %>
 	<div>
 		<%= f.label "Street Address" %>
 		<%= f.text_field :address1 %>
