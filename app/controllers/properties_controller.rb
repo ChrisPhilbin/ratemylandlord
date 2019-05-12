@@ -3,12 +3,16 @@ class PropertiesController < ApplicationController
 	def index
 		if params[:landlord_id]
 			@landlord = Landlord.find(params[:landlord_id])
-			@properties = @landlord.properties
+			if @landlord.nil?
+				redirect_to landlords_path
+			else
+				@properties = @landlord.properties
+			end
 		else
 			@properties = Property.all
 		end
 	end
-	
+
 	def new
 		@landlord = Landlord.find(params[:landlord_id])
 		@property = @landlord.properties.build(landlord_id: @landlord.id)
