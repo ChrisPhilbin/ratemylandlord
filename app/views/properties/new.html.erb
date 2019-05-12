@@ -1,6 +1,7 @@
 <div align="center"><h3>Add a new property</h3></div>
 
-<%= form_for ([@landlord, @property]) do |f| %>
+<%= form_for [@landlord, @property] do |f| %>
+		<%= f.hidden_field :landlord_id %>
 	<div>
 		<%= f.label "Street Address" %>
 		<%= f.text_field :address1 %>

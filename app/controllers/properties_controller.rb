@@ -2,7 +2,7 @@ class PropertiesController < ApplicationController
 
 	def new
 		@landlord = Landlord.find(params[:landlord_id])
-		@property = Property.new
+		@property = @landlord.properties.build(landlord_id: @landlord.id)
 	end
 
 	def show
@@ -25,6 +25,6 @@ class PropertiesController < ApplicationController
 	private
 
 	def property_params
-		params.require(:property).permit(:address1, :address2, :city, :state, :zip, :propertytype)
+		params.require(:property).permit(:address1, :city, :state, :zip, :propertytype, :landlord_id)
 	end
 end
