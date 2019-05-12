@@ -1,0 +1,9 @@
+<% @properties.each do |property| %>
+
+	Property address: <%= property.address1 %><br>
+	Property city: <%= property.city %><br>
+	Property state: <%= property.state %><br>
+	Property zip: <%= property.zip %><br>
+	Owned byL <%= property.landlord.fullname %><br>
+
+<% end %>
