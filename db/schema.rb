@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_13_005926) do
+ActiveRecord::Schema.define(version: 2019_05_28_141503) do
 
   create_table "landlord_properties", force: :cascade do |t|
     t.integer "landlord_id"
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 2019_05_13_005926) do
     t.text "username"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "email"
   end
 
 end
