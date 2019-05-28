@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :tenants
 
   resources :reviews
+  
   resources :properties do
   	resources :reviews
   end
