@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
-  resources :reviews
+ 
   resources :tenants
-  resources :properties
-  
+
+  resources :reviews
+  resources :properties do
+  	resources :reviews
+  end
+
   resources :landlords do
   	resources :properties
   end
