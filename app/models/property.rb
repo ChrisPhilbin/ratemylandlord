@@ -1,5 +1,4 @@
 class Property < ApplicationRecord
-	# has_many :landlord_properties
 	belongs_to :landlord
 	has_many :reviews
 
