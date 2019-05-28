@@ -1,5 +1,8 @@
 class Landlord < ApplicationRecord
 	has_many :properties
+	has_many :reviews, through: :properties
+
+
 	validates :firstname, :lastname, :email, :presence => true
 	validates :email, :uniqueness => true
 
