@@ -1,0 +1,10 @@
+
+<div align="center"><h2>Write a review</h2></div>
+<%= form_for @review do |f| %>
+
+	<%= f.label :contents %>
+	<%= f.text_area :contents %>
+
+	<%= f.submit "Submit review" %>
+
+<% end %>
