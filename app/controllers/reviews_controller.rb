@@ -1,7 +1,17 @@
 class ReviewsController < ApplicationController
 	
 	def new
-		@review = Review.new
+		if params[:property_id]
+			@property = Property.find(params[:property_id])
+			if @property.nil?
+				redirect_to properties_path
+			else
+				@property
+				@review = Review.new(:property=>@property)
+			end
+		else
+			redirect_to reviews_path
+		end
 	end
 
 	def create
@@ -14,7 +24,7 @@ class ReviewsController < ApplicationController
 			if @property.nil?
 				redirect_to properties_path
 			else
-				@reviews = @property.revies
+				@reviews = @property.reviews
 			end
 		else
 			@reviews = Review.all
@@ -24,6 +34,6 @@ class ReviewsController < ApplicationController
 	private
 
 	def review_params
-		params.require(:review).permit(:contents)
+		params.require(:review).permit(:contents, :property_id)
 	end
 end

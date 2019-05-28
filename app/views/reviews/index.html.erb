@@ -1,0 +1,7 @@
+<div align="center"><h3>Displaying reviews for <%= @property.fulladdress %> owned by <%= @property.landlord.fullname %></h2></div>
+
+<% @property.reviews.each do |review| %>
+	
+	<%= review.contents %>
+
+<% end %>

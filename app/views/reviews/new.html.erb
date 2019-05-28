@@ -1,6 +1,7 @@
-
 <div align="center"><h2>Write a review</h2></div>
-<%= form_for @review do |f| %>
+<%= form_for [@property, @review] do |f| %>
+
+	<%= f.hidden_field :property_id %>
 
 	<%= f.label :contents %>
 	<%= f.text_area :contents %>
